@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="acquiadam_index_listing_data_source" xsi:type="string">DamConsultants\Widen\Model\ResourceModel\Collection\Grid\WidenSycDataCollection</item>
+                <item name="acquiadam_index_sync_data_source" xsi:type="string">DamConsultants\Widen\Model\ResourceModel\Collection\Grid\WidenConfigSyncDataCollection</item>
+            </argument>
+        </arguments>
+    </type>
+    <virtualType name="DamConsultants\Widen\Model\ResourceModel\Collection\Grid\WidenSycDataCollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">widen_cron_data</argument>
+            <argument name="resourceModel" xsi:type="string">DamConsultants\Widen\Model\ResourceModel\WidenSycData</argument>
+        </arguments>
+    </virtualType>
+    <virtualType name="DamConsultants\Widen\Model\ResourceModel\Collection\Grid\WidenConfigSyncDataCollection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">widen_config_sync_data</argument>
+            <argument name="resourceModel" xsi:type="string">DamConsultants\Widen\Model\ResourceModel\WidenConfigSyncData</argument>
+        </arguments>
+    </virtualType>
+</config>

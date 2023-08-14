@@ -1,0 +1,35 @@
+<?xml version="1.0"?>
+
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">  
+   <menu>
+       <add id="DamConsultants_Widen::menu"
+           title="Acquia DAM" module="DamConsultants_Widen"
+           sortOrder="10"
+           resource="Magento_Backend::content"
+           />
+           <!-- START: new node -->
+       <add id="DamConsultants_Widen::menu_item"
+           title="Cron Action Log" module="DamConsultants_Widen"
+           sortOrder="10" parent="DamConsultants_Widen::menu"
+           action="acquiadam/index/acquiadamgrid"
+           resource="DamConsultants_Widen::menu_item"
+           />
+       <!-- END:   new node -->
+       <!-- START: new node -->
+       <add id="DamConsultants_Widen::menu_item2"
+           title="Synchronization Log" module="DamConsultants_Widen"
+           sortOrder="10" parent="DamConsultants_Widen::menu"
+           action="acquiadam/index/sync"
+           resource="DamConsultants_Widen::menu_item2"
+           />
+       <!-- END:   new node -->
+        <!-- START: new node -->
+       <add id="DamConsultants_Widen::menu_item1"
+           title="Acquia DAM MetaProperty " module="DamConsultants_Widen"
+           sortOrder="10" parent="DamConsultants_Widen::menu"
+           action="acquiadam/index/acquiadammetaproperty"
+           resource="DamConsultants_Widen::menu_item1"
+           />
+       <!-- END:   new node -->
+   </menu>
+</config> 
