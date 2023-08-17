@@ -12,7 +12,7 @@
     "license": "MIT",
     "autoload": {
         "psr-4": {
-            "DamConsultants\\widen\\": ""
+            "DamConsultants\\Widen\\": ""
         },
         "files": [
             "registration.php"
